@@ -16,8 +16,11 @@ const BottomTabNavigator = () => {
           iconName = focused
             ? 'home'
             : 'home';
-        } else if (route.name === 'Login') {
-          iconName = focused ? 'person' : 'person';
+        } 
+        else if (route.name === 'Login') {
+          iconName = focused 
+          ? 'person' 
+          : 'person';
         }
 
         // You can return any component that you like here!
