@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ImageBackground, Button, StyleSheet, StatusBar, Image } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import { db }  from '../database/firebase';
+import db  from '../database/firebase';
 
 export default function HomeScreen({navigation} ) {
 

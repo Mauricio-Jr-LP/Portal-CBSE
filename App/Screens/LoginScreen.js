@@ -21,10 +21,10 @@ export default function LoginScreen({navigation})
   }, [])
   
   const login = () => {
-    auth.signInWithEmailAndPassword(email, password).them(function(val)
-    {
+    auth.signInWithEmailAndPassword(email,password).then(function(val){
       setUser(val.email);
-    }).catch(function(error){
+    }).catch(function(erro){
+      alert(error.message);
     })
   }
 
