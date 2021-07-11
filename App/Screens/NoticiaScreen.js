@@ -6,9 +6,13 @@ import * as WebBrowser from 'expo-web-browser';
 import HomeScreen from './HomeScreen';
 /* */
 export default function NoticiaScreen({ route, navigation }) {
-  const [contato, setContato] = useState([
+  const [images, setImages] = useState([
     {
-      website: 'https://api.whatsapp.com/send?phone=5575983525355'
+      img: require('../resources/logowhats.png'),
+      width: 75,
+      height: 75,
+      ratio: 75,
+      website: 'https://api.whatsapp.com/send?phone=5575988043939'
     }
   ])
   const abrirNavegador = async (website) => 
@@ -27,15 +31,20 @@ export default function NoticiaScreen({ route, navigation }) {
           </Text>
         </View>
       </ScrollView>
-      <View style = {{ padding: 10, width: '100%', alignItems: 'flex-end'}}> 
-        <View style = {{ padding: 10, width: 70, borderRadius: 20 ,alignItems: 'flex-end', shadowColor: "#000", shadowOffset: { width: 3, height: 8,}, shadowOpacity: 0.5, shadowRadius: 10, elevation: 30,}}>
-          <TouchableOpacity onPress = {() => abrirNavegador(website)}>
-            <ImageBackground  style = {{width: 50, height: 50, }} source={{ uri: 'https://logosmarcas.net/wp-content/uploads/2020/05/WhatsApp-Logo.png' }}>
-
-            </ImageBackground>
-          </TouchableOpacity>
+      <View style = {{paddingLeft: 50, flexDirection: 'column' ,alignItems: 'flex-end'}}>
+          {
+            images.map(function(val)
+            {
+              return(
+                <View style = {styles.parentImage}>
+                  <TouchableOpacity onPress = {() => abrirNavegador(val.website)}>
+                    <Image style = {{width: 50, height: 50}} source = {val.img}/>
+                  </TouchableOpacity>
+                </View>
+              )
+            })
+          }
         </View>
-      </View>
     </View>
   );
 }
@@ -48,6 +57,11 @@ const styles = StyleSheet.create({
     justifyContent:'flex-end',
     width:'100%',
     flex:1
+  },
+  parentImage:
+  {
+    marginTop: 15,
+    padding: 10
   },
   imageConteudo: 
   {

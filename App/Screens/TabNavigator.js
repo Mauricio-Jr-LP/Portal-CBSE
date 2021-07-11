@@ -28,7 +28,7 @@ const BottomTabNavigator = () => {
       },
     })}
     tabBarOptions={{
-      activeTintColor: 'tomato',
+      activeTintColor: 'gold',
       inactiveTintColor: 'gray',
     }}
     >
