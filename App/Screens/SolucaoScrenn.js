@@ -1,10 +1,22 @@
 import React,{useEffect,useState, useRef} from 'react';
 import { Animated, View, Text,Button,TextInput, KeyboardAvoidingView,StyleSheet,ImageBackground,Image, StatusBar, LogBox } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-//import Modal from './Modal.js';
-import HomeScreen from './HomeScreen';
-/* */
+import * as WebBrowser from 'expo-web-browser';
+
 export default function SolucaoScreen({ route, navigation }) {
+  const [images, setImages] = useState([
+    {
+      img: require('../resources/logowhats.png'),
+      width: 75,
+      height: 75,
+      ratio: 75,
+      website: 'https://api.whatsapp.com/send?phone=5575988043939'
+    }
+  ])
+  const abrirNavegador = async (website) => 
+  {
+    let result = await WebBrowser.openBrowserAsync(website);
+  }
   return (
     <View style={{flex:1}}>
     <ScrollView style={{ flex: 1 }}>
@@ -24,15 +36,20 @@ export default function SolucaoScreen({ route, navigation }) {
         </Text>
       </View>
     </ScrollView>
-      <View style = {{ padding: 10, width: '100%', alignItems: 'flex-end'}}> 
-        <View style = {{ padding: 10, width: 70, borderRadius: 20 ,alignItems: 'flex-end', shadowColor: "#000", shadowOffset: { width: 3, height: 8,}, shadowOpacity: 0.5, shadowRadius: 10, elevation: 30,}}>
-          <TouchableOpacity onPress = {() => abrirNavegador(route.params.contato)}>
-            <ImageBackground  style = {{width: 50, height: 50, }} source={{ uri: 'https://logosmarcas.net/wp-content/uploads/2020/05/WhatsApp-Logo.png' }}>
-
-            </ImageBackground>
-          </TouchableOpacity>
+    <View style = {{paddingLeft: 50, flexDirection: 'column' ,alignItems: 'flex-end'}}>
+          {
+            images.map(function(val)
+            {
+              return(
+                <View style = {styles.parentImage}>
+                  <TouchableOpacity onPress = {() => abrirNavegador(val.website)}>
+                    <Image style = {{width: 50, height: 50}} source = {val.img}/>
+                  </TouchableOpacity>
+                </View>
+              )
+            })
+          }
         </View>
-      </View>
     </View>
   );
 }
@@ -51,6 +68,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     width:'100%',
     flex:0.5,
-    height:200
+    height:300
   }
 });

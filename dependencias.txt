@@ -16,28 +16,4 @@ expo install react-native-webview
 
 expo install expo-web-browser
 
-
-
-
-
-
-
-
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Noticias</Text>
-        <Button
-          title="Noticias"
-          onPress={() => navigation.navigate('Noticia')}
-        />
-        <Text>Noticias</Text>
-        <Button
-          title="Soluções"
-          onPress={() => navigation.navigate('Solucao')}
-        />
-        <Text>Config</Text>
-        <Button
-          title="Configurações"
-          onPress={() => navigation.navigate('Configuracoes')}
-        />
-      </View>
-    </View>
+expo install react-native-appearance
