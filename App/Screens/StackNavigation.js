@@ -26,19 +26,19 @@ const MainStackNavigator = () => {
     <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false}} />
       <Stack.Screen name="Solucao" component={Solucao} options={{ title: 'Solução' }}/>
-	  <Stack.Screen name="Noticia" component={Noticia} options={{ title: 'Noticia' }}/>
-	  <Stack.Screen name="Painel" component={Painel} options={{ title: 'Painel' }}/>
-	  <Stack.Screen name="Pastas" component={Pastas} options={{ title: 'Pastas' }}/>
-	  <Stack.Screen name="Documentos" component={Documentos} options={{ title: 'Documentos' }}/>
-	  <Stack.Screen name="Configuracoes" component={Configuracoes} options={{ title: 'Configurações' }}/>
+      <Stack.Screen name="Noticia" component={Noticia} options={{ title: 'Noticia' }}/>
+      <Stack.Screen name="Painel" component={Painel} options={{ title: 'Painel' }}/>
+      <Stack.Screen name="Pastas" component={Pastas} options={{ title: 'Pastas' }}/>
+      <Stack.Screen name="Documentos" component={Documentos} options={{ title: 'Documentos' }}/>
+      <Stack.Screen name="Configuracoes" component={Configuracoes} options={{ title: 'Configurações' }}/>
     </Stack.Navigator>
   );
 };
 
 const LoginStackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Login" component={Login} />
+    <Stack.Navigator>
+      <Stack.Screen name="Area do cliente" component={Login} />
     </Stack.Navigator>
   );
 };

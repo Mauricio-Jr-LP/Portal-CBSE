@@ -61,7 +61,7 @@ export default function HomeScreen({navigation} ) {
                         local: val.info.local,
                         fonte: val.info.fonte
                       })} 
-                      style = {{ width:'100%', height:'100%', backgroundColor:'rgba(0,0,0,0.1)', justifyContent:'flex-end' }}
+                      style = {{ width:'100%', height:'100%', backgroundColor:'rgba(0,0,0,0.5)', justifyContent:'flex-end' }}
                     >
                       <Text style={{fontSize:27,color:'white'}}>{val.info.nome}</Text>
                     </TouchableOpacity>
@@ -118,6 +118,8 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent:'flex-end',
     width:'100%',
+    borderWidth: 0.5,
+    borderColor: "white",
     flex:1
   },
   imageConteudo: 
