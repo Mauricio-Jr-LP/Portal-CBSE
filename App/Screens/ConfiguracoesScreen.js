@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
 const STYLES = ['default', 'dark-content', 'light-content'];

@@ -74,7 +74,7 @@ export default function HomeScreen({navigation} ) {
 
       </View>
       
-      <View style = {{ flex:0.7,padding:20 }}>
+      <View style = {{ flex:0.7, padding:20 }}>
         <View style = { styles.linhaSolucções }></View>
         <Text style = { styles.textSolucoes }>
           Soluções
@@ -108,7 +108,7 @@ export default function HomeScreen({navigation} ) {
       </View>        
 
     </View>
-    );
+  );
   
 }
 
@@ -209,6 +209,4 @@ const styles = StyleSheet.create({
     padding:10, 
     color: 'black' 
   },
-
-
 });

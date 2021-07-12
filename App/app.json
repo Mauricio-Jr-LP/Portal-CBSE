@@ -4,7 +4,7 @@
     "slug": "App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icone.png",
+    "icon": "./assets/icon2.png",
     "splash": {
       "image": "./assets/splash3.png",
       "resizeMode": "contain",
@@ -17,8 +17,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "ios": {"userInterfaceStyle": "automatic"}
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
