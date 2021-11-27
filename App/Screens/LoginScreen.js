@@ -36,23 +36,23 @@ export default function LoginScreen({navigation})
   }
 
   /*
-  const criar = () => {
-    auth.createUserWithEmailAndPassword(email, password)
-    .then(function(val)
-    {
-      setUser(val.email);
-      }).catch(function(error){
-        alert(erro.message);
-      })
-  }
+    const criar = () => {
+      auth.createUserWithEmailAndPassword(email, password)
+      .then(function(val)
+      {
+        setUser(val.email);
+        }).catch(function(error){
+          alert(erro.message);
+        })
+    }
 
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-  useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 5000
-    }).start();
-  },[])  
+    const fadeAnim = useRef(new Animated.Value(0)).current;
+    useEffect(() => {
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 5000
+      }).start();
+    },[])  
   */
 
   if(!user)
@@ -97,6 +97,51 @@ export default function LoginScreen({navigation})
             
             <View style = {{ justifyContent: 'center' }}>
               <Text style = { styles.tituloDep }>Regularize</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={ styles.viewDeps }>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>navigation.navigate('Pastas',
+            {
+              user: user,
+              email: email
+            })}
+          >
+            <Image source = {{ uri: 'https://firebasestorage.googleapis.com/v0/b/portal-cliente-590be.appspot.com/o/assets%2FLOGO%20Fonte%20Branca%20-%20Copia.png?alt=media&token=457c1c04-13f6-498d-a02d-4173d73d5acd'}} style = { styles.depItem } />
+            
+            <View style = {{ justifyContent: 'center' }}>
+              <Text style = { styles.tituloDep }>Contabil</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={ styles.viewDeps }>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>navigation.navigate('Pastas',
+            {
+              user: user,
+              email: email
+            })}
+          >
+            <Image source = {{ uri: 'https://firebasestorage.googleapis.com/v0/b/portal-cliente-590be.appspot.com/o/assets%2FLOGO%20Fonte%20Branca%20-%20Copia.png?alt=media&token=457c1c04-13f6-498d-a02d-4173d73d5acd'}} style = { styles.depItem } />
+            
+            <View style = {{ justifyContent: 'center' }}>
+              <Text style = { styles.tituloDep }>Fiscal</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={ styles.viewDeps }>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>navigation.navigate('Pastas',
+            {
+              user: user,
+              email: email
+            })}
+          >
+            <Image source = {{ uri: 'https://firebasestorage.googleapis.com/v0/b/portal-cliente-590be.appspot.com/o/assets%2FLOGO%20Fonte%20Branca%20-%20Copia.png?alt=media&token=457c1c04-13f6-498d-a02d-4173d73d5acd'}} style = { styles.depItem } />
+            
+            <View style = {{ justifyContent: 'center' }}>
+              <Text style = { styles.tituloDep }>Pessoal</Text>
             </View>
           </TouchableOpacity>
         </View>

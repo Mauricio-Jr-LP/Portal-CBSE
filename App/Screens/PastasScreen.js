@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import db  from '../database/firebase';
+import { auth, storage }  from '../database/firebase';
 import * as WebBrowser from 'expo-web-browser';
 
 export default function Pastas({ route })
